@@ -5,7 +5,7 @@
     <div class="nav">导航</div>
     <div class="main">
       <div class="mod"></div>
-      <div class="mod2"></div>
+      <div class="mod2"> </div>
       <div class="mod2"></div>
       <div class="mod2"></div>
       <div class="mod2"></div>
