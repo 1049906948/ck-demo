@@ -1,6 +1,6 @@
-import { setToken, removeToken } from 'utils/auth'
-import { setStore, getStore } from 'utils/store'
-import { encryption, deepClone } from 'utils/util'
+import { setToken, removeToken } from '@/utils/auth'
+import { setStore, getStore } from '@/utils/store'
+import { encryption, deepClone } from '@/utils/util'
 import { loginByUsername, getUserInfo, getMenu, getTopMenu, logout, refeshToken } from '@/api/user'
 import { formatPath } from '@/router/avue-router'
 
