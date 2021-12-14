@@ -1,24 +1,15 @@
 <template>
   <div class="mac_bg"></div>
-  <div class="login animate__animated"
-       :class="{'animate__bounceOut':pass}">
+  <div class="login animate__animated" :class="{'animate__bounceOut':pass}">
     <div class="head">
-      <img src="https://avatar.gitee.com/uploads/61/632261_smallweigit.jpg!avatar100?1518660401"
-           alt="">
+      <img src="https://avatar.gitee.com/uploads/61/632261_smallweigit.jpg!avatar100?1518660401" alt="">
     </div>
     <div class="message">{{userInfo.username}}</div>
     <div class="form">
-      <div class="item"
-           style="width:320px"
-           :class="passwdError?'error':''">
-        <input class="password"
-               placeholder="password here..."
-               v-model="passwd"
-               type="password" />
-        <i class="iconfont el-icon-unlock"
-           @click="handleLogin"></i>
-        <i class="iconfont icon-tuichu"
-           @click="handleLogout"></i>
+      <div class="item" style="width:320px" :class="passwdError?'error':''">
+        <input class="password"  placeholder="password here..."  v-model="passwd" type="password" />
+        <i class="iconfont el-icon-unlock" @click="handleLogin"></i>
+        <i class="iconfont icon-tuichu" @click="handleLogout"></i>
       </div>
     </div>
   </div>

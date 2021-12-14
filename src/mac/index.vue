@@ -28,14 +28,9 @@
     </div>
     <div class="body">
       <div class="desktop-app">
-        <template v-for="item in deskTopAppList"
-                  :key="item.key">
-          <div class="app-item"
-               @click="openApp(item)"
-               v-if="!item.hideInDesktop">
-            <div class="icon"
-                 :style="{backgroundColor:item.iconBgColor,color:item.iconColor}"><i class="iconfont"
-                 :class="item.icon"></i></div>
+        <template v-for="item in deskTopAppList" :key="item.key">
+          <div class="app-item"  @click="openApp(item)"   v-if="!item.hideInDesktop">
+            <div class="icon" :style="{backgroundColor:item.iconBgColor,color:item.iconColor}"><i class="iconfont" :class="item.icon"></i></div>
             <div class="title">{{item.label}}</div>
           </div>
         </template>
@@ -44,13 +39,9 @@
     <div class="footer">
       <div class="space"></div>
       <div class="dock">
-        <template v-for="item in openAppList"
-                  :key="item.key">
-          <div class="item"
-               @click="openApp(item)">
-            <i :style="{backgroundColor:item.iconBgColor,color:item.iconColor}"
-               class="iconfont"
-               :class="item.icon"></i>
+        <template v-for="item in openAppList" :key="item.key">
+          <div class="item" @click="openApp(item)">
+            <i :style="{backgroundColor:item.iconBgColor,color:item.iconColor}" class="iconfont" :class="item.icon"></i>
             <small style="margin-top:5px;font-size:10px">{{item.label}}</small>
           </div>
         </template>

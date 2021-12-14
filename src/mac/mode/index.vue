@@ -10,48 +10,29 @@
          :style="{left:nowRect.left+'px',top:nowRect.top+'px',bottom:nowRect.bottom+'px',right:nowRect.right+'px',zIndex:app.isTop?98:88}"
          :class="getExtBoxClasses()">
       <div class="box-top">
-        <div class="box-top-left"
-             @mousedown="resizeMouseDown"></div>
-        <div class="box-top-center"
-             @mousedown="resizeMouseDown"></div>
-        <div class="box-top-right"
-             @mousedown="resizeMouseDown"></div>
+        <div class="box-top-left" @mousedown="resizeMouseDown"></div>
+        <div class="box-top-center" @mousedown="resizeMouseDown"></div>
+        <div class="box-top-right" @mousedown="resizeMouseDown"></div>
       </div>
       <div class="box-center">
-        <div class="box-center-left"
-             @mousedown="resizeMouseDown"></div>
+        <div class="box-center-left" @mousedown="resizeMouseDown"></div>
         <div class="box-center-center loader">
-          <div class="app-bar"
-               :style="{backgroundColor:app.tabbarBgColor}"
-               @mousedown.stop="positionMouseDown"
-               v-on:dblclick="appBarDoubleClicked">
+          <div class="app-bar" :style="{backgroundColor:app.tabbarBgColor}"  @mousedown.stop="positionMouseDown" v-on:dblclick="appBarDoubleClicked">
             <div class="controll">
-              <div class="close"
-                   @click.stop="close"></div>
-              <!-- <div class="min"
-                   @click.stop="hide"></div> -->
-              <div class="full"
-                   :class="app.disableResize?'full-disabled':''"
-                   @click.stop="switchFullScreen">
+              <div class="close" @click.stop="close"></div>
+              <div class="full" :class="app.disableResize?'full-disabled':''"  @click.stop="switchFullScreen">
               </div>
             </div>
-            <div class="title"
-                 :style="{color:app.tabbarTextColor}">{{app.title}}</div>
+            <div class="title" :style="{color:app.tabbarTextColor}">{{app.title}}</div>
           </div>
-          <iframe :src="location + app.path"
-                  frameborder="0"
-                  class="iframe"></iframe>
+          <iframe :src="location + app.path" class="iframe"></iframe>
         </div>
-        <div class="box-center-right"
-             @mousedown="resizeMouseDown"></div>
+        <div class="box-center-right" @mousedown="resizeMouseDown"></div>
       </div>
       <div class="box-bottom">
-        <div class="box-bottom-left"
-             @mousedown="resizeMouseDown"></div>
-        <div class="box-bottom-center"
-             @mousedown="resizeMouseDown"></div>
-        <div class="box-bottom-right"
-             @mousedown="resizeMouseDown"></div>
+        <div class="box-bottom-left"  @mousedown="resizeMouseDown"></div>
+        <div class="box-bottom-center" @mousedown="resizeMouseDown"></div>
+        <div class="box-bottom-right" @mousedown="resizeMouseDown"></div>
       </div>
     </div>
   </div>
