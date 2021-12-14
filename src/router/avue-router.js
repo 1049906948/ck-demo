@@ -110,6 +110,9 @@ RouterPlugin.install = function (option = {}) {
     }
   }
 }
+
+
+
 export const formatPath = (ele, first) => {
   const propsDefault = website.menu;
   const icon = ele[propsDefault.icon];
@@ -139,4 +142,7 @@ export const formatPath = (ele, first) => {
     })
   }
 }
+
+
+
 export default RouterPlugin;

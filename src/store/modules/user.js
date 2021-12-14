@@ -114,10 +114,15 @@ const user = {
     //获取系统菜单
     GetMenu ({ commit }, parentId) {
       return new Promise(resolve => {
+        /**
+         * 获取菜单信息
+         */
         getMenu(parentId).then((res) => {
+          // debugger;
           const data = res.data.data
           let menu = deepClone(data);
           menu.forEach(ele => formatPath(ele, true));
+          // debugger;
           commit('SET_MENUALL', menu)
           commit('SET_MENU', menu)
           resolve(menu)
