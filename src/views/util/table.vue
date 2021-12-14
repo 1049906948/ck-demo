@@ -5,7 +5,6 @@
         <el-table-column prop="date" label="Date" width="180" />
         <el-table-column prop="name" label="Name" width="180" />
         <el-table-column prop="address" label="Address" />
-        1231231
       </el-table>
     </basic-container>
   </div>
